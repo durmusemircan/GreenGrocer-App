@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" snapToPixel="false" style="-fx-background-color: #FBF6EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CustomerController">
+  <content>
+    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="1500.0" prefWidth="960.0" style="-fx-background-color: #FBF6EE;">
+         <children>
+            <Button fx:id="logOutButton" layoutX="846.0" layoutY="28.0" mnemonicParsing="false" onAction="#logOutUser" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #E21818;" text="LOGOUT" textAlignment="CENTER" textFill="#fbf6ee">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.5" specularConstant="0.0" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="200.0" elevation="60.0" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <TitledPane animated="false" layoutY="77.0" prefHeight="445.0" prefWidth="477.0" style="-fx-background-color: #65B741;" text="FRUITS" textFill="#65b741">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <content>
+                  <VBox fx:id="fruitsVBox" prefHeight="982.0" prefWidth="475.0" style="-fx-background-color: #65b741;" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="480.0" layoutY="77.0" prefHeight="445.0" prefWidth="477.0" style="-fx-background-color: #65B741;" text="VEGETABLES" textFill="#65b741">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <content>
+                  <VBox fx:id="vegetablesVBox" prefHeight="1000.0" prefWidth="475.0" style="-fx-background-color: #65b741;" />
+               </content>
+            </TitledPane>
+            <Button fx:id="userDetailsButton" layoutX="738.0" layoutY="28.0" mnemonicParsing="false" onAction="#editUser" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #65B741;" text="User Details" textAlignment="CENTER" textFill="#fbf6ee">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.5" specularConstant="0.0" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="200.0" elevation="60.0" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="shoppingCartButton" layoutX="20.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #65B741;" text="Shopping Cart" textAlignment="CENTER" textFill="#fbf6ee">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.5" specularConstant="0.0" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="200.0" elevation="60.0" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Text fill="#65b741" layoutX="296.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group16 GreenGrocer" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="40.0" />
+               </font>
+            </Text>
+            <TableView fx:id="orderTable" layoutY="1163.0" prefHeight="323.0" prefWidth="960.0" style="-fx-background-color: #65b741;">
+              <columns>
+                <TableColumn fx:id="orderDate" prefWidth="91.0" text="ORDER DATE" />
+                <TableColumn fx:id="deliveryDate" prefWidth="101.0" text="DELIVERY DATE" />
+                  <TableColumn fx:id="products" prefWidth="465.0" text="PRODUCTS" />
+                  <TableColumn fx:id="totalCost" prefWidth="87.0" text="TOTAL COST" />
+                  <TableColumn fx:id="delivered" prefWidth="87.0" text="DELIVERED?" />
+              </columns>
+            </TableView>
+            <Text fill="#65b741" layoutX="438.0" layoutY="1142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orders" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+  </content>
+</ScrollPane>
