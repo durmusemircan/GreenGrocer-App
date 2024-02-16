@@ -1,4 +1,4 @@
-# Login Screen Screen
+# Login Screen
 - ![Login Screen](https://github.com/durmusemircan/GreenGrocer-App/assets/148007829/16af7034-0b19-43b3-a1d0-0f78244c8e87)
 
 # Customer Screen
